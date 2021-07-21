@@ -1,0 +1,117 @@
+/* Geral */
+
+* {
+    margin: 0;  /* Tirar toda margim externa*/
+    padding: 0; /*Tirar toda margem interna*/
+    box-sizing: border-box; /* Para os inputs não passarem as bordas das margens*/
+    font-family: Helvetica, sans-serif; /* Tipo de fonte */
+    color: #323232; /* Cor do texto */
+    border: none;  /* Tirar bordas*/
+}
+
+input, label {
+    display: block; /* Cada um representa uma linha (não ficar um do lado do outro) */
+    width: 100%; /* Largura de total*/
+}
+
+input:focus, label:focus { /* Quando clicar */
+     outline: none; /* Tirar bordas */
+}
+
+a {  /* Link */
+    color: #e60084  ; /*Cor dp link*/
+}
+
+body { /* Corpo */
+    padding-top: 5vh; /* View height (basicamente % da tela)*/
+    background-image: url("../img/ceu_tarde.jpg"); /* Fundo */
+    background-size: cover; /* Centralizar imagem*/
+    background-position-y:  -150px; /* Subir um pouco a imagem*/
+}
+
+/* Form */
+
+#main-conteiner { /*Toda div da form*/
+    width: 500px; /* Largura */
+    margin-left: auto; /* Margem esqueda automatica */
+    margin-right: auto; /* Margem direita automatica */
+    background-color: white; /* Cor fundo */
+    border-radius: 10px; /* Arredondar vertices */
+    padding: 25px; /* Margem interna */
+}
+
+#main-conteiner h1 { /* Titulo form */
+    text-align: center; /* Centralizar texto */
+    margin-bottom: 25px; /* Margem inferior */
+    font-size: 1.6rem; /* Fonte adaptada ao elemento root */
+}
+
+form { /* Formulário */
+    display: flex; /* Por ser elemento pai para ajustar os demais */
+    flex-wrap: wrap; /* Para posicionar os elementos na forma que queremos */
+    justify-content: space-between; /* Para criar um espaço entre os elementos que estão na mesma linha */
+}
+
+.full-box {
+    flex: 1 1 100%; /* Gralf(?) shorink(?) largura */ 
+    position: relative; /* Para elemento com posição absoluta */
+}
+
+.half-box {
+    flex: 1 1 45%; /* Gralf(?) shorink(?) largura */
+    position: relative; 
+}
+
+.spacing {
+    margin-right: 2.5%; /* Margem entre os dois inputs */
+}
+
+label { 
+    font-weight: bolder; /* Negrito*/
+    font-size: .8rem;  /* Tamanho fonte (80% do elemento root da página) */
+}
+
+input {
+    border-bottom: 2px solid #323232; /* Borda inferior*/
+    padding: 10px; /* Margem interna para afastar da borda inferior */
+    font-size: .9rem; /* Tamanho fonte (90% do elemento root da página) */
+    margin-bottom: 40px; /* Margem externa inferior para afastar um do outro */
+}
+
+input:focus { /* Ao clicar nos inputs */
+    border-color: #e60084; /* Cor da borda */
+}
+
+input[type="submit"] { /* Para pegar apenas o input tipo submit */
+    background-color: #e60084; /* Cor de fundo */
+    color: white;  /* Cor da fonte */
+    border: none;  /* Tirar a fonte */
+    border-radius: 20px; /* Arredondar vertices*/
+    height: 40px; /* Altura */
+    cursor: pointer; /* Aparecer mãozinha ao passar o mouse */
+}
+
+input[type="submit"]:hover {
+    box-shadow: 1px 1px 3px black;
+}
+
+#agreement {
+    margin-right: 5px; /* Descolar um pouco do texto */
+}
+
+#agreement, #agreement-label {
+    display: inline; /* Para ficarem na mesma linha */
+    width: auto; /* Largura automatica */
+}
+
+/* validações  */
+.error-validation {  /* Div que vai mostrar erro nos inouts */
+    color: #ff1a1a; /* Cor fonte */
+    position: absolute; /* Posição absolute para encaixar nos inputs */
+    top: 57px; /* Distância do topo */
+    font-size: .8rem; /* Tamanho fonte (80% do elemento root da página) */
+}
+
+.template {
+    display: none; /* Só vai aparecer quando chamado */
+}
